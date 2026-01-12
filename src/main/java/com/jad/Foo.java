@@ -18,30 +18,6 @@ public class Foo {
         this.qux = new Qux();
     }
 
-    public Bar getBar() {
-        return this.bar;
-    }
-
-    public List<Baz> getBazs() {
-        return this.bazs;
-    }
-
-    public Qux getQux() {
-        return this.qux;
-    }
-
-    public Corge getCorge() {
-        return this.corge;
-    }
-
-    public void setCorge(Corge corge) {
-        this.corge = corge;
-    }
-
-    public List<Grault> getGraults() {
-        return this.graults;
-    }
-
     public void addBaz(Baz baz) {
         if (baz != null) {
             this.bazs.add(baz);
@@ -51,6 +27,30 @@ public class Foo {
     public void addGrault() {
         Grault newGrault = new Grault(this);
         this.graults.add(newGrault);
+    }
+
+    public Bar getBar() {
+        return bar;
+    }
+
+    public List<Baz> getBazs() {
+        return bazs;
+    }
+
+    public Qux getQux() {
+        return qux;
+    }
+
+    public Corge getCorge() {
+        return corge;
+    }
+
+    public void setCorge(Corge corge) {
+        this.corge = corge;
+    }
+
+    public List<Grault> getGraults() {
+        return graults;
     }
 
 }
