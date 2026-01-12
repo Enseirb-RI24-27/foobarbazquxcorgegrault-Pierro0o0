@@ -25,8 +25,7 @@ public class Foo {
     }
 
     public void addGrault() {
-        Grault newGrault = new Grault(this);
-        this.graults.add(newGrault);
+        graults.add(new Grault(this));
     }
 
     public Bar getBar() {
@@ -46,12 +45,15 @@ public class Foo {
     }
 
     public void setCorge(Corge corge) {
+        // 1. Si on avait déjà un Corge, on lui dit qu'il n'est plus lié à ce Foo
         if (this.corge != null) {
             this.corge.setFoo(null);
         }
 
+        // 2. On assigne le nouveau Corge
         this.corge = corge;
 
+        // 3. Si le nouveau Corge n'est pas null, on le lie à ce Foo (this)
         if (this.corge != null) {
             this.corge.setFoo(this);
         }
