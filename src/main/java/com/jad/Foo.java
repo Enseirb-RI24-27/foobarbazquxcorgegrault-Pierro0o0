@@ -28,10 +28,14 @@ public class Foo {
         this.corge = corge;
     }
 
-    private Bar bar;             // <-bar : Bar (1)
-    private List<Baz> bazs;      // <-bazs : Baz[] (*)
-    private Qux qux;             // <-qux : Qux (1)
+    private Bar bar;
+    private List<Baz> bazs;
+    private Qux qux;
     private Corge corge;
     private List<Grault> graults;
+
+    public Foo(Bar bar){
+        this.bar = bar;
+    }
 
 }
