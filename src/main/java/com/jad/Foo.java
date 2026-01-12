@@ -36,6 +36,9 @@ public class Foo {
 
     public Foo(Bar bar){
         this.bar = bar;
+        this.bazs = new ArrayList<>();
+        this.graults = new ArrayList<>();
+
     }
 
 }
